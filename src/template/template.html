@@ -53,40 +53,18 @@
 
 <body>
     <div id="content-container">
-        <!--##! for content in hotels !##-->
+        ##! for content in hotels !##
         <div class="hotel-info-container">
             <h1>###hotels[0].name###</h1>
             <p>###hotels[0].location###</p>
+            ##! for infoBlock in content !##
             <div class="block-container">
                 <p class="block-container-description">###hotels[0].information[0].topic###</p>
                 <p class="block-container-content">###hotels[0].information[0].text###</p>
             </div>
-            <div class="block-container">
-                <p class="block-container-description">###hotels[0].information[1].topic###</p>
-                <p class="block-container-content">###hotels[0].information[1].text###</p>
-            </div>
-            <div class="block-container">
-                <p class="block-container-description">###hotels[0].information[2].topic###</p>
-                <p class="block-container-content">###hotels[0].information[2].text###</p>
-            </div>
+            ##! endfor !##
         </div>
-        <!--##! endfor !##-->
-        <div class="hotel-info-container">
-            <h1>###hotels[1].name###</h1>
-            <p>###hotels[1].location###</p>
-            <div class="block-container">
-                <p class="block-container-description">###hotels[1].information[0].topic###</p>
-                <p class="block-container-content">###hotels[1].information[0].text###</p>
-            </div>
-            <div class="block-container">
-                <p class="block-container-description">###hotels[1].information[1].topic###</p>
-                <p class="block-container-content">###hotels[1].information[1].text###</p>
-            </div>
-            <div class="block-container">
-                <p class="block-container-description">###hotels[1].information[2].topic###</p>
-                <p class="block-container-content">###hotels[1].information[2].text###</p>
-            </div>
-        </div>
+        ##! endfor !##
     </div>
 </body>
 

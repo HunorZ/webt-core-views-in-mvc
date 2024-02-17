@@ -93,7 +93,15 @@ echo renderTemplate($template, $variables);
 
 function renderTemplate($template, $varialbes): string
 {
+    if (preg_match("/##! for [a-zA-Z]* in [a-zA-Z]* !##/", $template, $matches, PREG_OFFSET_CAPTURE)) {
+        print_r($matches);
+        print_r(substr($template, $matches[0][1], strlen($template)-$matches[0][1]));
+    }
     return replaceVariable($varialbes, $template);
+
+    //render inner loop => stack
+    //go outwords and finally replace it
+
 }
 
 function replaceVariable($varialbes, $content, $preVariable = ""): string
@@ -110,7 +118,6 @@ function replaceVariable($varialbes, $content, $preVariable = ""): string
                     $content = replaceVariable($varialbes[$key][$i], $content, ($preVariable == "") ? $key . "[" . $i . "]" : $preVariable . "." . $key . "[" . $i . "]");
                 }
             } else {
-                //has keys if no search for index
                 $content = replaceVariable($varialbes[$key], $content, ($preVariable == "") ? $key : $preVariable . "." . $key);
             }
         } else {
