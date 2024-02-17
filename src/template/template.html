@@ -53,32 +53,40 @@
 
 <body>
     <div id="content-container">
-        ##! for content in hotels !##
+        <!--##! for content in hotels !##-->
         <div class="hotel-info-container">
-            <h1>###content.name###</h1>
-            <p>###content.location###</p>
+            <h1>###hotels[0].name###</h1>
+            <p>###hotels[0].location###</p>
             <div class="block-container">
-                <p class="block-container-description">###textDescription###</p>
-                <p class="block-container-content">###text###</p>
+                <p class="block-container-description">###hotels[0].information[0].topic###</p>
+                <p class="block-container-content">###hotels[0].information[0].text###</p>
             </div>
             <div class="block-container">
-                <p class="block-container-description">Amenities</p>
-                <p class="block-container-content">
-                    The Plaza offers the grandeur of old-world elegance with the comforts
-                    of modern amenities, including luxurious rooms and suites, the famous Palm Court for afternoon tea,
-                    several high-end dining options, a lavish Champagne Bar, the renowned Plaza Food Hall, and a
-                    comprehensive health and wellness center.</p>
+                <p class="block-container-description">###hotels[0].information[1].topic###</p>
+                <p class="block-container-content">###hotels[0].information[1].text###</p>
             </div>
             <div class="block-container">
-                <p class="block-container-description">Unique Feature</p>
-                <p class="block-container-content">
-                    The Plaza is home to the Eloise Suite, inspired by the fictional
-                    young girl who lived at the hotel in the beloved children’s books. This whimsically decorated suite
-                    offers a one-of-a-kind stay, complete with Eloise-themed books, toys, and a tea set.
-                </p>
+                <p class="block-container-description">###hotels[0].information[2].topic###</p>
+                <p class="block-container-content">###hotels[0].information[2].text###</p>
             </div>
         </div>
-        ##! endfor !##
+        <!--##! endfor !##-->
+        <div class="hotel-info-container">
+            <h1>###hotels[1].name###</h1>
+            <p>###hotels[1].location###</p>
+            <div class="block-container">
+                <p class="block-container-description">###hotels[1].information[0].topic###</p>
+                <p class="block-container-content">###hotels[1].information[0].text###</p>
+            </div>
+            <div class="block-container">
+                <p class="block-container-description">###hotels[1].information[1].topic###</p>
+                <p class="block-container-content">###hotels[1].information[1].text###</p>
+            </div>
+            <div class="block-container">
+                <p class="block-container-description">###hotels[1].information[2].topic###</p>
+                <p class="block-container-content">###hotels[1].information[2].text###</p>
+            </div>
+        </div>
     </div>
 </body>
 
