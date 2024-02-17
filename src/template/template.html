@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Top 3 Hotels</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+
+    <style>
+        #content-container {
+            margin: auto;
+            width: 50%;
+        }
+
+        .block-container {
+            border-top: 1px;
+            border-bottom: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            border-style: solid;
+
+            font-family: "Comfortaa", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+
+            padding-top: 2em;
+            padding-bottom: 2em;
+        }
+
+        .block-container-description {
+            font-size: 1em;
+            color: rgb(159, 159, 159);
+            margin-bottom: 0.05em;
+        }
+
+        .block-container-content {
+            margin-top: 0em;
+            font-size: 1.4em;
+        }
+
+        @media (max-width: 800px) {
+            #content-container {
+                width: 90%;
+                margin: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content-container">
+        ##! for content in hotels !##
+        <div class="hotel-info-container">
+            <h1>###content.name###</h1>
+            <p>###content.location###</p>
+            <div class="block-container">
+                <p class="block-container-description">###textDescription###</p>
+                <p class="block-container-content">###text###</p>
+            </div>
+            <div class="block-container">
+                <p class="block-container-description">Amenities</p>
+                <p class="block-container-content">
+                    The Plaza offers the grandeur of old-world elegance with the comforts
+                    of modern amenities, including luxurious rooms and suites, the famous Palm Court for afternoon tea,
+                    several high-end dining options, a lavish Champagne Bar, the renowned Plaza Food Hall, and a
+                    comprehensive health and wellness center.</p>
+            </div>
+            <div class="block-container">
+                <p class="block-container-description">Unique Feature</p>
+                <p class="block-container-content">
+                    The Plaza is home to the Eloise Suite, inspired by the fictional
+                    young girl who lived at the hotel in the beloved children’s books. This whimsically decorated suite
+                    offers a one-of-a-kind stay, complete with Eloise-themed books, toys, and a tea set.
+                </p>
+            </div>
+        </div>
+        ##! endfor !##
+    </div>
+</body>
+
+</html>

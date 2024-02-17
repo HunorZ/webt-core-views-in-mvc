@@ -1,0 +1,16 @@
+{
+    "name": "hunor/webt-core-views-in-mvc",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Hunor\\WebtCoreViewsInMvc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hunor Zakarias",
+            "email": "hunor.zakarias@gmail.com"
+        }
+    ],
+    "require": {}
+}
