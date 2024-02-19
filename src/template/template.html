@@ -53,14 +53,15 @@
 
 <body>
     <div id="content-container">
-        ##! for content in hotels !##
+        ##! for content in hotels.good !##
+        ###test###
         <div class="hotel-info-container">
-            <h1>###hotels[0].name###</h1>
-            <p>###hotels[0].location###</p>
-            ##! for infoBlock in content !##
+            <h1>###content.name###</h1>
+            <p>###content.location###</p>
+            ##! for info in content.information !##
             <div class="block-container">
-                <p class="block-container-description">###hotels[0].information[0].topic###</p>
-                <p class="block-container-content">###hotels[0].information[0].text###</p>
+                <p class="block-container-description">###info.topic###</p>
+                <p class="block-container-content">###info.text###</p>
             </div>
             ##! endfor !##
         </div>
