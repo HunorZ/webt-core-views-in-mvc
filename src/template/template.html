@@ -53,17 +53,22 @@
 
 <body>
     <div id="content-container">
-        ##! for content in hotels.good !##
-        ###test###
+        ##! for content in hotels !##
         <div class="hotel-info-container">
             <h1>###content.name###</h1>
             <p>###content.location###</p>
-            ##! for info in content.information !##
             <div class="block-container">
-                <p class="block-container-description">###info.topic###</p>
-                <p class="block-container-content">###info.text###</p>
+                <p class="block-container-description">###content.information[0].topic###</p>
+                <p class="block-container-content">###content.information[0].text###</p>
             </div>
-            ##! endfor !##
+            <div class="block-container">
+                <p class="block-container-description">###content.information[1].topic###</p>
+                <p class="block-container-content">###content.information[1].text###</p>
+            </div>
+            <div class="block-container">
+                <p class="block-container-description">###content.information[2].topic###</p>
+                <p class="block-container-content">###content.information[2].text###</p>
+            </div>
         </div>
         ##! endfor !##
     </div>
